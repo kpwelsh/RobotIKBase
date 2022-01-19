@@ -15,12 +15,8 @@ pub fn finite_difference(f: &dyn Fn(&[f64], &mut f64) -> Result<(), SolverError>
     let mut f0 = 0.0;
     f(u, &mut f0).unwrap();
 
-    let mut x = [0.0,0.0,0.0,0.0,0.0,0.0,0.0];
-    for i in 0..7 {
-        x[i] = u[i];
-    }
-
-    for i in 0..7 {
+    let mut x : Vec<f64> = u.iter().map(|&v| v).collect();
+    for i in 0..x.len() {
         let mut fi = 0.0;
         x[i] += h;
         f(&x, &mut fi).unwrap();
