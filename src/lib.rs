@@ -44,7 +44,17 @@ impl IKSolver {
         let ee = self.robot.find(frame).unwrap();
         self.arm = Some(SerialChain::from_end(ee));
         self.cache = self.arm.as_ref().and_then(|arm| Some(PANOCCache::new(arm.dof(), 1e-3, 10)));
+    }
 
+    pub fn dof(&self) -> i32 {
+        match self.arm.as_ref() {
+            Some(arm) => {
+                arm.dof() as i32
+            },
+            None => {
+                -1
+            }
+        }
     }
 
     pub fn solve(&mut self, current_q: &Vec<f64>, pose: &Isometry3<f64>) -> Result<Vec<f64>, SolverError> {
