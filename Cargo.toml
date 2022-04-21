@@ -12,6 +12,6 @@ name = "robot_ik_base"
 once_cell = "*"
 urdf-rs = "*"
 libc = "0"
-optimization_engine = {path = "../optimization-engine-wasm" }
+optimization_engine = {git = "https://github.com/kpwelsh/optimization-engine-wasm" }
 nalgebra = "0.26"
 k = "0.25"
