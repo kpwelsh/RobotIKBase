@@ -1,0 +1,9 @@
+title: Robot Arm IK
+email: kevinwelsh132@gmail.com
+github_username: kpwelsh
+
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
+
+markdown: kramdown
+highlighter: rouge
