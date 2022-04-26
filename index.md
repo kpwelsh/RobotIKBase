@@ -65,7 +65,7 @@ $$
 
 Where the second term applies the groove loss function to the magnitude of the rotation that takes the current end-effector rotation to the target rotation.
 
-####Self Collision
+#### Self Collision
 
 The self collision cost is inspired by CollisionIK[^6]. For each combination of links, $$ i, j $$, if the links are neither adjacent, nor the same, a cost $$ c_{ij} $$ is added, where 
 
