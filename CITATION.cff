@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Welsh"
+  orcid: "https://orcid.org/0000-0001-6341-6562"
+title: "Real Time Robot Arm IK"
+version: 1.1.0
+date-released: 5-10-2022
+url: "https://github.com/kpwelsh/RobotIKBase"
